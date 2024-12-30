@@ -6,6 +6,7 @@ export const blogadd = async (req, res) => {
   try {
     const blogData = JSON.parse(req.body.blog);
     const blogImage = req.file?.filename;
+    
 
     if (!blogImage) {
       return res.status(400).json({
