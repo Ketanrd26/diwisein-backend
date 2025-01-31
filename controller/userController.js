@@ -36,6 +36,13 @@ export const login = async (req, res) => {
         [username]
       );
   
+ 
+    
+   
+      if (response[0].password !== password){
+        return res.status(400).json({ message: "User not found" })
+        
+      }
    
       if (response.length === 0) {
         return res.status(400).json({
