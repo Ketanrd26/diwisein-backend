@@ -5,7 +5,7 @@ import { addBlog } from "../service/blogService.js";
 export const blogadd = async (req, res) => {
   try {
     const blogData = JSON.parse(req.body.blog);
-    const blogImage = `http://62.72.56.158/images/diwiseblog/${req.file?.filename}`;
+    const blogImage = req.file?.filename;
     
    
     if (!blogImage) {
