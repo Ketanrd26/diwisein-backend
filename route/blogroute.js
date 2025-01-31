@@ -8,7 +8,7 @@ export const blogRoute = express.Router();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = "/var/www/documents/diwiseblog"; 
+    const uploadPath = "/var/www/images/diwiseblog"; 
     if (!fs.existsSync(uploadPath)) {
       fs.mkdirSync(uploadPath, { recursive: true });
     }
